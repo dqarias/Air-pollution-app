@@ -1,11 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AirPollution from './Routes/App/AirPollution';
 import Home from './Routes/Home/Home';
+import Countries from './Routes/Countries/Countries';
+import Pollution from './Routes/Pollution/Pollution';
+import NotFound from './Routes/NotFound/NotFound';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AirPollution />}>
+          <Route index element={<Home />} />
+          <Route path=":region" element={<Countries />} />
+          <Route path=":region/:country" element={<Pollution />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
