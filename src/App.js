@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<AirPollution />}>
           <Route index element={<Home />} />
           <Route path=":region" element={<Countries />} />
-          <Route path=":country/:latitude/:longitude" element={<Pollution />} />
+          <Route path=":country/:sn/:latitude/:longitude" element={<Pollution />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

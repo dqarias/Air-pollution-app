@@ -11,7 +11,7 @@ const Countries = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(fetchCountries(region));
+    dispatch(fetchCountries(region));
   }, []);
   console.log(countries);
 

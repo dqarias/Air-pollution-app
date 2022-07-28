@@ -6,7 +6,7 @@ const Country = ({
 }) => {
   const navigate = useNavigate();
   const handleAirPollution = () => {
-    navigate(`/${name}/${latitude}/${longitude}`);
+    navigate(`/${name}/${altSpelling}/${latitude}/${longitude}`);
   };
   return (
     <li
