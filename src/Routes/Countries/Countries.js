@@ -16,7 +16,7 @@ const Countries = () => {
   console.log(countries);
 
   return (
-    <ul>
+    <ul className="countries__container">
       {countries.map((country) => (
         <Country
           key={country.name}

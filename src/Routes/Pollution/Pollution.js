@@ -28,7 +28,7 @@ const Pollution = () => {
   return (
     <>
       <h2>{country}</h2>
-      <img src={`${URL_IMAGE}/${shortCountryName}/vector.svg`} alt="" />
+      {/* <img src={`${URL_IMAGE}/${shortCountryName}/vector.svg`} alt="" /> */}
       <ul>
         {airPollution.map((pollution) => (
           <PollutionDetail

@@ -4,3 +4,5 @@
 @import url('../Components/Hero/hero.css');
 @import url('../Components/Continents/continents.css');
 @import url('../Components/Continent/continent.css');
+@import url('../Routes/Countries/countries.css');
+@import url('../Components/Country/country.css');
