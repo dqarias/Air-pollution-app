@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import PollutionDetail from '../../Components/Pollution/PollutionDetail';
 import fetchAirPollution from '../../Services/airPollutionAPI';
 
 const Pollution = () => {
@@ -20,7 +21,18 @@ const Pollution = () => {
   console.log(airPollution);
 
   return (
-    <div>pollution</div>
+    <>
+    <h2>{country}</h2>
+    <ul>
+      {airPollution.map((pollution) => (
+        <PollutionDetail
+          key={country}
+          aqi={pollution.aqi}
+          components={pollution.components}
+        />
+      ))}
+    </ul>
+    </>
   );
 };
 

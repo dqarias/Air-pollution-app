@@ -11,9 +11,7 @@ const Countries = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!countries.length) {
       dispatch(fetchCountries(region));
-    }
   }, []);
   console.log(countries);
 
