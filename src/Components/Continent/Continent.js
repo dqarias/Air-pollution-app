@@ -12,12 +12,17 @@ const Continent = ({ name }) => {
 
   return (
     <li
+      className="continent__card"
       onClick={() => handleCountries()}
       aria-hidden="true"
     >
 
-      <img src={continentName === 'americas' ? `${URL_IMAGE}/america/vector.svg` : `${URL_IMAGE}/${continentName}/vector.svg`} alt="" />
-      <p>{name}</p>
+      <img
+        className="continent__card-image"
+        src={continentName === 'americas' ? `${URL_IMAGE}/america/vector.svg` : `${URL_IMAGE}/${continentName}/vector.svg`}
+        alt=""
+      />
+      <p className="continent__card-name">{name}</p>
     </li>
   );
 };

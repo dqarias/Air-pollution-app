@@ -3,13 +3,14 @@
 
 body {
   /* colors variables */
-  --color-primary-black: #272a31;
-  --color-blue-two: #4386bf;
-  --color-blue-three: #0290ff;
-  --color-transparent-orange: #ec5342d3;
-  --color-gray: #121212;
+  --color-primary: #3f60a4;
+  --color-primary-ligth: #7299f4;
+  --color-primary-dark: #004190;
+  --color-secondary: #4269ae;
+  --color-secondary-ligth: #5d9bf4;
+  --color-secondary-dark: #004390;
   --color-white: #fff;
-  --color-white-three: #fafafa;
+
 
   /* fonts variables */
   --font-titles: "Montserrat", sans-serif;
