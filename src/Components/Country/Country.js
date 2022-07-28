@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import URL_IMAGE from '../../Utils/mapImage';
 
 const Country = ({
-  name, population, area, latitude, longitude, region, altSpelling,
+  name, population, area, latitude, longitude, altSpelling,
 }) => {
   const navigate = useNavigate();
   const handleAirPollution = () => {
@@ -16,7 +17,7 @@ const Country = ({
       onClick={() => handleAirPollution()}
       aria-hidden="true"
     >
-      <img src={`${URL_IMAGE}/${imageCountry}/vector.svg` } alt="" />
+      <img src={`${URL_IMAGE}/${imageCountry}/vector.svg`} alt="" />
       <p>{name}</p>
       <p>{population}</p>
       <p>{area}</p>
@@ -25,3 +26,12 @@ const Country = ({
 };
 
 export default Country;
+
+Country.propTypes = {
+  name: PropTypes.string.isRequired,
+  population: PropTypes.number.isRequired,
+  area: PropTypes.number.isRequired,
+  latitude: PropTypes.number.isRequired,
+  longitude: PropTypes.number.isRequired,
+  altSpelling: PropTypes.string.isRequired,
+};

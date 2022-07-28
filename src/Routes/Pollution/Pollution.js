@@ -6,7 +6,9 @@ import fetchAirPollution from '../../Services/airPollutionAPI';
 import URL_IMAGE from '../../Utils/mapImage';
 
 const Pollution = () => {
-  const { country, sn, latitude, longitude } = useParams();
+  const {
+    country, sn, latitude, longitude,
+  } = useParams();
 
   const airPollution = useSelector((state) => state.pollution.pollution);
   const dispatch = useDispatch();

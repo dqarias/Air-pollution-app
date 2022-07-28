@@ -1,4 +1,6 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PollutionDetail = ({ aqi, components }) => (
   <>
@@ -15,3 +17,8 @@ const PollutionDetail = ({ aqi, components }) => (
 );
 
 export default PollutionDetail;
+
+PollutionDetail.propTypes = {
+  aqi: PropTypes.number.isRequired,
+  components: PropTypes.object.isRequired,
+};
