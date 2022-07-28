@@ -4,11 +4,12 @@
 body {
   /* colors variables */
   --color-primary: #3f60a4;
-  --color-primary-ligth: #7299f4;
+  --color-primary-ligth: #5686e2;
   --color-primary-dark: #004190;
   --color-secondary: #4269ae;
   --color-secondary-ligth: #5d9bf4;
   --color-secondary-dark: #004390;
+  --color-terciary: #4369b2;
   --color-white: #fff;
 
 

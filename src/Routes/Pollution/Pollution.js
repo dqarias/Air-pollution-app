@@ -3,11 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import PollutionDetail from '../../Components/Pollution/PollutionDetail';
 import fetchAirPollution from '../../Services/airPollutionAPI';
-import URL_IMAGE from '../../Utils/mapImage';
 
 const Pollution = () => {
   const {
-    country, sn, latitude, longitude,
+    country, latitude, longitude,
   } = useParams();
 
   const airPollution = useSelector((state) => state.pollution.pollution);
@@ -18,8 +17,6 @@ const Pollution = () => {
     longitude,
   };
 
-  const shortCountryName = sn.toLowerCase();
-
   useEffect(() => {
     dispatch(fetchAirPollution(coord));
   }, []);
@@ -27,8 +24,9 @@ const Pollution = () => {
 
   return (
     <>
-      <h2>{country}</h2>
-      {/* <img src={`${URL_IMAGE}/${shortCountryName}/vector.svg`} alt="" /> */}
+      <h2 className="pollution__details-country">
+        {country}
+      </h2>
       <ul>
         {airPollution.map((pollution) => (
           <PollutionDetail

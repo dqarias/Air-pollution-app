@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import fetchCountries from '../../Services/restCountriesAPI';
 import Country from '../../Components/Country/Country';
+import HeroContinent from '../../Components/HeroContinent/HeroContinent';
 
 const Countries = () => {
   const { region } = useParams();
@@ -16,20 +17,24 @@ const Countries = () => {
   console.log(countries);
 
   return (
-    <ul className="countries__container">
-      {countries.map((country) => (
-        <Country
-          key={country.name}
-          name={country.name}
-          population={country.population}
-          area={country.area}
-          latitude={country.latitude}
-          longitude={country.longitude}
-          altSpelling={country.altSpelling}
-          region={country.region}
-        />
-      ))}
-    </ul>
+    <div>
+      <HeroContinent />
+      <ul className="countries__container">
+        {countries.map((country) => (
+          <Country
+            key={country.name}
+            name={country.name}
+            population={country.population}
+            area={country.area}
+            latitude={country.latitude}
+            longitude={country.longitude}
+            altSpelling={country.altSpelling}
+            region={country.region}
+          />
+        ))}
+      </ul>
+    </div>
+
   );
 };
 

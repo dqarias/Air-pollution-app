@@ -1,14 +1,21 @@
 import React from 'react';
-import cover1 from '../../Assets/Img/cover1.jpg';
+import cover from '../../Assets/Img/cover1.jpg';
 
 const Hero = () => (
-  <div>
-    <img
-      src={cover1}
-      alt="air pollution cover"
-      className="Hero__cover-image"
-    />
-  </div>
+  <>
+    <div className="hero__container">
+      <img
+        src={cover}
+        alt="air pollution cover"
+        className="hero__cover-image"
+      />
+      <p className="hero__cover-text">Air Pollution App</p>
+    </div>
+    <div>
+      <p className="hero__continent">CONTINENTS :</p>
+    </div>
+  </>
+
 );
 
 export default Hero;
