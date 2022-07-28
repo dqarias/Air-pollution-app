@@ -4,7 +4,7 @@ import Home from './Routes/Home/Home';
 import Countries from './Routes/Countries/Countries';
 import Pollution from './Routes/Pollution/Pollution';
 import NotFound from './Routes/NotFound/NotFound';
-import './App.css';
+import './Styles/App.css';
 
 function App() {
   return (
