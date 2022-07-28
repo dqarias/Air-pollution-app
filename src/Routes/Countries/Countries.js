@@ -9,10 +9,14 @@ const Countries = () => {
 
   const countries = useSelector((state) => state.countries.countries);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchCountries(region));
+    if (!countries.length) {
+      dispatch(fetchCountries(region));
+    }
   }, []);
   console.log(countries);
+
   return (
     <ul>
       {countries.map((country) => (

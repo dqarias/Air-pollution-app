@@ -3,7 +3,7 @@ import fetchCountries from '../../Services/restCountriesAPI';
 
 const initialState = {
   countries: [],
-  status: 'loading',
+  status: '',
 };
 
 const countriesSlice = createSlice({
