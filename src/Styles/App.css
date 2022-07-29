@@ -10,4 +10,5 @@
 @import url('../Components/Country/country.css');
 @import url('../Routes/Pollution/pollution.css');
 @import url('../Components/Pollution/pollutionDetail.css');
-@import url('../Components/HeroContinent/heroContinent.css')
+@import url('../Components/HeroContinent/heroContinent.css');
+@import url('../Components/SearchCountry/searchCountry.css');
