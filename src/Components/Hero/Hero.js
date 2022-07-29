@@ -12,7 +12,7 @@ const Hero = () => (
       <p className="hero__cover-text">Air Pollution App</p>
     </div>
     <div>
-      <p className="hero__continent">CONTINENTS :</p>
+      <p className="hero__continent-title">Choose a Continent :</p>
     </div>
   </>
 

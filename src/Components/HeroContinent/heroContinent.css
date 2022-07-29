@@ -1,7 +1,7 @@
 .hero__continent{
     background-color: var(--color-primary-ligth);
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     padding: 2rem 0.2rem;
 }
 

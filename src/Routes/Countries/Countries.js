@@ -1,15 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import fetchCountries from '../../Services/restCountriesAPI';
 import Country from '../../Components/Country/Country';
 import HeroContinent from '../../Components/HeroContinent/HeroContinent';
+import SearchCountry from '../../Components/SearchCountry/SearchCountry';
 
 const Countries = () => {
+  const [searchCountry, setSearchCountry] = useState('');
   const { region } = useParams();
 
   const countries = useSelector((state) => state.countries.countries);
   const dispatch = useDispatch();
+
+  const handleSearch = (event) => {
+    setSearchCountry(event.target.value);
+  };
+  console.log('search', searchCountry);
+
+  const filterCountries = () => (countries.filter((country) => {
+    if (searchCountry === '') {
+      return country;
+    } if (country.name.toLowerCase().includes(searchCountry.toLocaleLowerCase())) {
+      return country;
+    } return null;
+  }));
+
+  const filterCountry = filterCountries();
+  console.log('filter', filterCountry);
 
   useEffect(() => {
     dispatch(fetchCountries(region));
@@ -19,8 +37,11 @@ const Countries = () => {
   return (
     <div>
       <HeroContinent />
+      <SearchCountry
+        handleSearch={handleSearch}
+      />
       <ul className="countries__container">
-        {countries.map((country) => (
+        {filterCountry.map((country) => (
           <Country
             key={country.name}
             name={country.name}

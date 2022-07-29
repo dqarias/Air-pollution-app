@@ -20,7 +20,7 @@
     font-size: 2rem;
 }
 
-.hero__continent{
+.hero__continent-title{
     background-color: var(--color-secondary-dark);
     color: var(--color-white);
     font-weight: 500;
