@@ -30,7 +30,7 @@ const PollutionDetail = ({ aqi, components }) => {
       </div>
       <div className="pollution__detail-info">
         <p className="pollution__detail-index">
-          Air Quality index
+          Air Quality index:
           {' '}
           {aqi}
         </p>
