@@ -1,27 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The indivial page of the app countires renders properly 1`] = `
-Array [
-  <div
-    className="hero__container"
+<div
+  className="hero__container"
+>
+  <img
+    alt="air pollution cover"
+    className="hero__cover-image"
+    src="cover1.jpg"
+  />
+  <p
+    className="hero__cover-text"
   >
-    <img
-      alt="air pollution cover"
-      className="hero__cover-image"
-      src="cover1.jpg"
-    />
-    <p
-      className="hero__cover-text"
-    >
-      Air Pollution App
-    </p>
-  </div>,
-  <div>
-    <p
-      className="hero__continent-title"
-    >
-      Choose a Continent :
-    </p>
-  </div>,
-]
+    Air Pollution App
+  </p>
+</div>
 `;

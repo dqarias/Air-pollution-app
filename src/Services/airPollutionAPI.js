@@ -13,7 +13,6 @@ const fetchAirPollution = createAsyncThunk('Pollution/fetchAirPollution', async 
     components: pollutionData.list[0].components,
     aqi: pollutionData.list[0].main.aqi,
   }];
-  console.log(result);
   return result;
 });
 

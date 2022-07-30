@@ -23,7 +23,6 @@ const Pollution = () => {
   useEffect(() => {
     dispatch(fetchAirPollution(coord));
   }, []);
-  console.log(airPollution);
 
   useEffect(() => {
     if (loading !== 'uploaded') {

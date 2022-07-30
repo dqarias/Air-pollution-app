@@ -15,12 +15,10 @@ const Countries = () => {
   const countries = useSelector((state) => state.countries.countries);
   const loading = useSelector((state) => state.countries.status);
   const dispatch = useDispatch();
-  console.log('uploader', loading);
 
   const handleSearch = (event) => {
     setSearchCountry(event.target.value);
   };
-  console.log('search', searchCountry);
 
   const filterCountries = () => (countries.filter((country) => {
     if (searchCountry === '') {
@@ -31,7 +29,6 @@ const Countries = () => {
   }));
 
   const filterCountry = filterCountries();
-  console.log('filter', filterCountry);
 
   useEffect(() => {
     dispatch(fetchCountries(region));
@@ -44,7 +41,6 @@ const Countries = () => {
       setLoader(false);
     }
   }, [loading]);
-  console.log(countries);
 
   return (
     <div>
