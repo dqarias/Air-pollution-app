@@ -4,14 +4,13 @@ import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
 import App from '../App';
 
-
 describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
   });
@@ -23,9 +22,9 @@ describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
     waitFor(() => {
@@ -37,9 +36,9 @@ describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
     waitFor(() => {
@@ -51,9 +50,9 @@ describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
     waitFor(() => {
@@ -65,9 +64,9 @@ describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
     waitFor(() => {
@@ -79,9 +78,9 @@ describe('Body of the whole landing page', () => {
   it('checks for the name of the country', () => {
     act(() => {
       render(
-          <Provider store={store}>
-            <App />
-          </Provider>
+        <Provider store={store}>
+          <App />
+        </Provider>,
       );
     });
     waitFor(() => {
@@ -89,6 +88,4 @@ describe('Body of the whole landing page', () => {
       expect(chillForDOM).not.toBeNull();
     });
   });
-
-  
 });

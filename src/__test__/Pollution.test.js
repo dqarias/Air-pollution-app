@@ -1,12 +1,13 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { MemoryRouter, Routes, Route, useParams,} from 'react-router-dom';
+import {
+  MemoryRouter, Routes, Route,
+} from 'react-router-dom';
 import { setupServer } from 'msw/node';
 import renderWithProviders from '../Utils/test-utils';
 import '@testing-library/jest-dom';
 import { handlers } from '../Utils/mockHandlers';
 import Pollution from '../Routes/Pollution/Pollution';
-
 
 const server = setupServer(...handlers);
 
@@ -42,19 +43,18 @@ describe(Pollution, () => {
     expect(country).toBeInTheDocument();
   });
 
-   test('should render Air pollution details', async () => {
+  test('should render Air pollution details', async () => {
     renderWithProviders(
       <MemoryRouter initialEntries={['/Peru/PE/-10/-76']}>
         <Routes>
           <Route
             path="/:country/:sn/:latitude/:longitude"
-            
             element={<Pollution />}
           />
         </Routes>
       </MemoryRouter>,
     );
 
-    expect(await screen.findByText(/Peru/i)).toBeVisible()
+    expect(await screen.findByText(/Peru/i)).toBeVisible();
   });
 });

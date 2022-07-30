@@ -6,11 +6,17 @@ import { Provider } from 'react-redux';
 import countriesSlice from '../Redux/Countries/countries';
 import airPollutionSlice from '../Redux/Pollution/airPollution';
 
-
 export default function renderWithProviders(
   ui,
   {
-    store = configureStore({ reducer: { countries: countriesSlice, pollution: airPollutionSlice, } }),
+    store = configureStore(
+      {
+        reducer: {
+          countries: countriesSlice,
+          pollution: airPollutionSlice,
+        },
+      },
+    ),
     ...renderOptions
   } = {},
 ) {

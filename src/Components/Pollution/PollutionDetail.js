@@ -17,29 +17,34 @@ const PollutionDetail = ({ aqi, components }) => {
   } else {
     airQuality = 'Very Poor';
   }
-  return (
-    <>
-      <div className="pollution__detail-gauge">
-        <GaugeChart
-          id="gauge-chart2"
-          nrOfLevels={5}
-          percent={aqi / 5}
-          formatTextValue={(aqi) => 'AQI: '.concat('', aqi / 20)}
-        />
 
+  return (
+    <div className="pollution_detail">
+      <div>
+        <div className="pollution__detail-gauge">
+          <GaugeChart
+            className="pollution_gauge"
+            id="gauge-chart2"
+            nrOfLevels={5}
+            percent={aqi / 5}
+            formatTextValue={(aqi) => 'AQI: '.concat('', aqi / 20)}
+          />
+
+        </div>
+        <div className="pollution__detail-info">
+          <p className="pollution__detail-index">
+            Air Quality index:
+            {' '}
+            {aqi}
+          </p>
+          <p className="pollution__detail-quality">
+            The Air Quality is:
+            {' '}
+            {airQuality}
+          </p>
+        </div>
       </div>
-      <div className="pollution__detail-info">
-        <p className="pollution__detail-index">
-          Air Quality index:
-          {' '}
-          {aqi}
-        </p>
-        <p className="pollution__detail-quality">
-          The Air Quality is:
-          {' '}
-          {airQuality}
-        </p>
-      </div>
+
       <div className="pollution__detail-data">
         <h3>Pollutants</h3>
         <li className="pollution__detail-list">
@@ -76,7 +81,7 @@ const PollutionDetail = ({ aqi, components }) => {
         </li>
       </div>
 
-    </>
+    </div>
   );
 };
 

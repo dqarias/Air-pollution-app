@@ -4,7 +4,7 @@ import Hero from '../../Components/Hero/Hero';
 
 const Home = () => (
 
-  <div>
+  <div className="home__container">
     <Hero />
     <Continents />
   </div>
