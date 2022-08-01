@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL_BACKEND = 'http://api.openweathermap.org/data/2.5/air_pollution';
+const URL_BACKEND = 'https://api.openweathermap.org/data/2.5/air_pollution';
 const KEY = '3791b4d78793009d07ca991c93ad61af';
 
 /* const airPollutionUrl = (lat, lon) => `${URL_BACKEND}?lat=${lat}&lon=${lon}&appid=${KEY}`; */
